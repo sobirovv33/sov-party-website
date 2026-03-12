@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Партия С.О.В.</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SovParty.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom box-shadow mb-3 py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo_sov.png" alt="С.О.В. Logo" height="50" class="me-2" />
+                    <span class="fw-bold text-primary-sov header-title">С.О.В.</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-500" asp-area="" asp-controller="Home" asp-action="About">О партии</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-500" asp-area="" asp-controller="Home" asp-action="Program">Программа</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-500" asp-area="" asp-controller="Home" asp-action="Team">Команда</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-500" asp-area="" asp-controller="Home" asp-action="Bills">Законопроекты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-500" asp-area="" asp-controller="Home" asp-action="Contacts">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a class="btn btn-primary-sov btn-support" asp-area="" asp-controller="Home" asp-action="Contacts">Поддержать</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid p-0 flex-grow-1 d-flex flex-column">
+        <main role="main" class="pb-3 w-100 flex-grow-1">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-white bg-dark-sov py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center mb-2">
+                         <img src="~/images/logo_sov.png" alt="С.О.В. Logo" height="40" class="me-2 bg-white rounded-circle p-1" />
+                         <span class="fw-bold fs-5">Партия «С.О.В.»</span>
+                    </div>
+                    <p class="text-light-sov mb-0">Социал-демократическая партия «СОВесть»</p>
+                </div>
+                <div class="col-md-6 text-md-end text-start">
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@sov-party.ru</p>
+                    <div class="social-links mt-2">
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-light opacity-25" />
+            <div class="text-center text-light-sov small">
+                Это студенческий проект. Партия не настоящая.
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

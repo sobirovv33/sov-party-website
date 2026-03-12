@@ -1,0 +1,116 @@
+@{
+    ViewData["Title"] = "Контакты";
+}
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary-sov">Свяжитесь с нами</h1>
+        <div class="header-divider mx-auto bg-accent-sov" style="width: 80px; height: 3px; border-radius: 2px;"></div>
+        <p class="lead text-muted mt-4">
+            Присоединяйтесь к команде созидателей. Вместе мы построим сильную страну!
+        </p>
+    </div>
+
+    <!-- Contact Details & Form -->
+    <div class="row g-5 mb-5 align-items-stretch">
+        
+        <!-- Contact Information -->
+        <div class="col-lg-5">
+            <div class="bg-primary-sov text-white p-5 rounded h-100 shadow">
+                <h3 class="fw-bold mb-4">Наши контакты</h3>
+                <p class="mb-5 text-light-sov">Готовы ответить на ваши вопросы, обсудить инициативы или принять заявку в волонтерский штаб.</p>
+                
+                <ul class="list-unstyled mb-5">
+                    <li class="d-flex align-items-center mb-4">
+                        <div class="bg-white rounded-circle p-3 text-primary-sov me-3">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </div>
+                        <div>
+                            <span class="d-block small text-light-sov text-uppercase">Email-адрес</span>
+                            <a href="mailto:xochuavtovatpoORG@mail.ru" class="text-white text-decoration-none h5 mb-0">xochuavtovatpoORG@mail.ru</a>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-4">
+                        <div class="bg-white rounded-circle p-3 text-primary-sov me-3">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <span class="d-block small text-light-sov text-uppercase">Горячая линия</span>
+                            <a href="tel:+79954387921" class="text-white text-decoration-none h5 mb-0">+7 995 438-79-21</a>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <div class="bg-white rounded-circle p-3 text-primary-sov me-3">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <span class="d-block small text-light-sov text-uppercase">Центральный штаб</span>
+                            <address class="text-white h5 mb-0 mb-0" style="font-style: normal;">г. Казань, ул. Муштари 13</address>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+            <div class="card-sov p-5 h-100 border-0 shadow">
+                <h3 class="fw-bold text-primary-sov mb-4">Написать нам сообщение</h3>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label text-muted">Имя <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Иван" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label text-muted">Фамилия <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Иванов" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-muted">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="subject" class="form-label text-muted">Тема обращения</label>
+                        <select class="form-select" id="subject">
+                            <option selected disabled value="">Выберите тему...</option>
+                            <option value="1">Вступить в партию</option>
+                            <option value="2">Предложить законопроект</option>
+                            <option value="3">Сообщить о проблеме</option>
+                            <option value="4">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="message" class="form-label text-muted">Сообщение <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Введите ваше сообщение здесь..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary-sov btn-lg w-100">Отправить сообщение</button>
+                    
+                    <p class="small text-muted text-center mt-3 mb-0">Нажимая кнопку «Отправить сообщение», вы соглашаетесь с Политикой конфиденциальности.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Support Section -->
+    <div class="row mt-5">
+        <div class="col-12 py-5 px-md-5 rounded border border-3 border-danger bg-white">
+            <div class="text-center">
+                 <h2 class="fw-bold text-primary-sov mb-3"><i class="fas fa-hand-holding-heart me-2 text-danger-sov"></i>Поддержать партию</h2>
+                 <p class="lead text-muted mb-4 col-md-8 mx-auto">
+                     Вы можете помочь нашему делу. Станьте волонтёром, распространяйте информацию или сделайте пожертвование. 
+                     Каждый ваш шаг приближает нас к справедливому будущему России!
+                 </p>
+                 <div class="d-flex justify-content-center flex-column flex-sm-row gap-3">
+                     <button class="btn btn-danger btn-lg text-white px-5"><i class="fas fa-users me-2"></i>Стать волонтёром</button>
+                     <button class="btn btn-outline-sov btn-lg px-5"><i class="fas fa-piggy-bank me-2"></i>Пожертвовать (Заглушка)</button>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
